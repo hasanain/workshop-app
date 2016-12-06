@@ -1,3 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+    <h1>{{title}}</h1>
+</div>
+<nav>
+    <div class="nav-wrapper">
+        <ul>
+            <li routerLinkActive="green-background" *ngFor="let navItem of navItems">
+                <a href={{navItem.route}}>{{navItem.name}}</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet>
