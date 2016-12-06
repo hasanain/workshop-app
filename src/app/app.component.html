@@ -4,8 +4,8 @@
 <nav>
     <div class="nav-wrapper">
         <ul>
-            <li routerLinkActive="green-background" *ngFor="let navItem of navItems">
-                <a href={{navItem.route}}>{{navItem.name}}</a>
+            <li routerLinkActive="green-background" *ngFor="let navItem of navItems" style="cursor:pointer">
+                <a (click)="onSelect(navItem)">{{navItem.name}}</a>
             </li>
         </ul>
     </div>
